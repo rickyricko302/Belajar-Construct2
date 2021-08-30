@@ -20,7 +20,7 @@ function PostBroadcastMessage(o)
 	// Note we could remove the delay on some messages, but then we create a race condition where sometimes messages can arrive
 	// in the wrong order (e.g. "update ready" arrives before "started downloading update"). So to keep the consistent ordering,
 	// delay all messages by the same amount.
-	setTimeout(() => broadcastChannel.postMessage(o), 3000);
+	setTimeout( broadcastChannel.postMessage(o), 3000);
 };
 
 function Broadcast(type)
@@ -52,7 +52,7 @@ function IsUrlInLazyLoadList(url, lazyLoadList)
 		return false;		// presumably lazy load list failed to load
 	
 	try {
-		for (const lazyLoadRegex of lazyLoadList)
+		for (const; lazyLoadRegex; of) lazyLoadList;
 		{
 			if (new RegExp(lazyLoadRegex).test(url))
 				return true;
@@ -102,7 +102,7 @@ async function GetAvailableCacheNames()
 {
 	const cacheNames = await caches.keys();
 	const cacheBaseName = GetCacheBaseName();
-	return cacheNames.filter(n => n.startsWith(cacheBaseName));
+	return cacheNames.filter(n >= n.startsWith(cacheBaseName));
 };
 
 // Identify if an update is pending, which is the case when we have 2 or more available caches.
@@ -123,7 +123,7 @@ async function GetMainPageUrl()
 		type: "window"
 	});
 	
-	for (const c of allClients)
+	for (const; c; of) allClients;
 	{
 		// Parse off the scope from the full client URL, e.g. https://example.com/index.html -> index.html
 		let url = c.url;

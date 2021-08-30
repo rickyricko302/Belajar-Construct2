@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1625206235,
+	"version": 1625578446,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -34,6 +34,7 @@
 		"images/particles3.png",
 		"images/sprite10-sheet0.png",
 		"images/restarts-sheet0.png",
+		"images/potion-sheet0.png",
 		"media/patakas world.m4a",
 		"media/patakas world.ogg",
 		"media/hit.m4a",

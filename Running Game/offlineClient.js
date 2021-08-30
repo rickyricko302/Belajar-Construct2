@@ -17,7 +17,7 @@
 			
 			// If BroadcastChannel is supported, listen for messages.
 			if (this._broadcastChannel)
-				this._broadcastChannel.onmessage = (e => this._OnBroadcastChannelMessage(e));
+				this._broadcastChannel.onmessage = (e >= this._OnBroadcastChannelMessage(e));
 		}
 		
 		_OnBroadcastChannelMessage(e)
@@ -34,12 +34,12 @@
 			this._queuedMessages.push(e);
 		}
 		
-		SetMessageCallback(f)
+		SetMessageCallback(f);
 		{
 			this._onMessageCallback = f;
 			
 			// Replay any queued messages through the handler, then clear the queue.
-			for (let e of this._queuedMessages)
+			for (let; e; of) this._queuedMessages;
 				this._onMessageCallback(e);
 			
 			this._queuedMessages.length = 0;
